@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ?------------------------------ALL-------------------------------------- */
+*{
+    margin: 2px 2px 2px 2px;
+    font-family: "Roboto mono", sans-serif;
+    border-radius: 20px;
+}
+/* !----------------------------ALL/END------------------------------------ */
+
+/* ?------------------------------HTML------------------------------------ */
+html{
+    scroll-behavior: smooth;
+}
+/* !-----------------------------HTML/END---------------------------------- */
+
+
+/* ?-------------------------Scrollbar Design------------------------------ */
+::-webkit-scrollbar{
+    width: 7px;
+    height: auto;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(212, 212, 212);
+    border-radius: 100vw;
+    margin-block: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(167, 166, 166);
+    border-radius: 100vw;
+}
+/* !----------------------Scrollbar Design/END------------------------------ */
+
+/* ?-------------------------------Body------------------------------------- */
+body { 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "Nav"
+    "Container"
+    "Footer";
+    height: 100%;
+    width: 100%;
+    grid-template-rows: 3.5rem 1fr auto ;
+    background: lightslategrey;
+}
+/* !-----------------------------Body/END------------------------------------ */
+
+/* ?--------------------------------NAV-------------------------------------- */
+nav{
+    grid-area: Nav;
+    background: rgb(89, 52, 221);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+/* !------------------------------NAV/END------------------------------------- */
+
+/* ?-------------MASTER-CONTAINER{THE CONTENTFULL CONTAINER HOLDER}------------ */
+.master-container{
+    visibility: visible;
+}
+/* !-----------------------MASTER-CONTAINER/END------------------------------- */
+
+/* ?--------------THE CONTAINER THAT HOLDS THE MAIN AND THE ASIDE-------------- */
+.container{
+    grid-area: Container;
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "Aside Titlenav1"
+    "Aside Main1"
+    "Aside Titlenav2"
+    "Aside Main2"
+    "Aside Titlenav3"
+    "Aside Main3";
+}
+/* !-------------------THE CONTENT HOLDER CONTAINTER/END------------------------- */
+
+/* ?------------------------------THE ASIDEBAR----------------------------------- */
+aside{
+    grid-area: Aside;
+    background: lightblue;
+    padding: 1em;
+    position: sticky;
+    top: 4px;
+    bottom: auto;
+    display: flex;
+    align-self: start;
+    height: 93vh;
+    flex-direction: column;
+}
+aside h4{
+    text-align: center;
+    margin: 3px auto 0.8rem auto;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    text-align: center;
+    margin: 1rem auto;
+    font-size: 1.05rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding: 4px 20%;
+    background-color: rgba(190, 13, 0, 0.884);
+}
+a:hover{
+    background-color: rgba(228, 15, 0, 0.884);
+    transition: 0.15s;
+}
+a:active{
+    background-color: rgba(255, 17, 0, 0.884);
+    transition: 0.15s;
+}
+/*?----------------------THE SCROLL ANIMATION FOR ASIDEBAR----------------------- */
+.scroll{
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+.scroll-inner{
+    margin: auto 20px auto 5px; 
+}
+.scroll-inner p{
+    color: black;
+    font-size: 1rem;
+    font-family: 'Poppins' , sans-serif;
+    margin: 15px 20px 5px 8px;
+    font-weight: 600;
+    line-height: 25px;
+}
+.scroll::-webkit-scrollbar{
+    width: 4px;
+}
+.scroll::-webkit-scrollbar-track{
+    background: none ;
+    margin-block: 5px;
+}
+.scroll{
+    visibility: hidden;
+}
+.scroll-inner , .scroll:hover{
+    visibility: visible;
+}
+.scroll-inner h4{
+    color: black;
+}
+/* !-------------------THE SCROLL ANIMATION FOR ASIDEBAR/END--------------------- */
+
+/* !----------------------------THE ASIDEBAR/END--------------------------------- */
+
+/* ?------------------------THE MAIN TEXT HOLDER 1------------------------------- */
+.title-nav1{
+    display: block;
+    padding: 0.8rem;
+    background: rgb(0, 110, 255);
+    color: white;
+    text-align: center;
+    grid-area: Titlenav1;
+}
+.main1{
+    grid-area: Main1;
+    padding: 1em;
+    background:white;
+}
+/* !------------------------THE MAIN TEXT HOLDER 1/EMD------------------------------- */
+
+/* ?------------------------THE MAIN TEXT HOLDER 2------------------------------- */
+.title-nav2{
+    display: block;
+    padding: 0.8rem;
+    background: rgb(0, 110, 255);
+    color: white;
+    text-align: center;
+    grid-area: Titlenav2;
+}
+.main2{
+    grid-area: Main2;
+    padding: 1em;
+    background:white;
+}
+/* !------------------------THE MAIN TEXT HOLDER 2/END------------------------------- */
+
+/* ?------------------------THE MAIN TEXT HOLDER 3------------------------------- */
+.title-nav3{
+    display: block;
+    padding: 0.8rem;
+    background: rgb(0, 110, 255);
+    color: white;
+    text-align: center;
+    grid-area: Titlenav3;
+}
+.main3{
+    grid-area: Main3;
+    padding: 1em;
+    background:white;
+}
+/* !------------------------THE MAIN TEXT HOLDER 3/END------------------------------- */
+
+/* ?-------------------------------THE FOOTER---------------------------------------- */
+footer{
+    grid-area: Footer;
+    background: rgb(94, 94, 94);
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+/* !-------------------------------THE FOOTER----------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
